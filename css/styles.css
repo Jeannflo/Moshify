@@ -459,3 +459,22 @@ a {
         grid-template-columns: repeat(3, 1fr);
     }   
 }
+
+
+/* Testimonials */
+
+.testimonial {
+    padding: 3rem;
+}
+
+.testimonial__image > img{ /*targeting the img that is directly
+    inside of this container by using >*/
+    width: 100%;
+}
+
+.testimonial__image > .icon-container{
+    position: absolute;
+    top: 3rem;
+    right: 0;
+
+}
