@@ -170,6 +170,15 @@ a {
 .icon--primary {
     fill: var(--color-primary)
 }
+.icon--white {
+    fill: #fff;
+}
+
+.icon--small{
+    height: 30px;
+    width: 30px;
+
+}
 
 .icon-container{
     background: #f3f9fa;
@@ -181,6 +190,24 @@ a {
     align-items: center;
 
 }
+
+.icon-container--accent{
+    background: var(--color-accent);
+
+}
+
+@media screen and (min-width: 768px){
+    .testimonial .quote,
+    .testimonial .quote__author {
+        font-size: 2.4rem;
+    }
+
+    .testimonial .quote{
+        margin-left: 6rem;
+    }
+
+}
+
 
 /* Buttons */
 
@@ -466,7 +493,9 @@ a {
 .testimonial {
     padding: 3rem;
 }
-
+.testimonial__image{
+    position: relative;
+}
 .testimonial__image > img{ /*targeting the img that is directly
     inside of this container by using >*/
     width: 100%;
@@ -475,6 +504,10 @@ a {
 .testimonial__image > .icon-container{
     position: absolute;
     top: 3rem;
-    right: 0;
+    right: -32px;
 
 }
+
+/*TODO:
+Reilign the quote logo for mobile sites
+*/
