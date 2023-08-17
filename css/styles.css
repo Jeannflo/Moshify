@@ -265,6 +265,11 @@ a {
     color: #fff;
 }
 
+.btn--stretched {
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+
 @media screen and (min-width: 1024px) {
     .btn{
         font-size: 1.5rem;
@@ -511,3 +516,46 @@ a {
 /*TODO:
 Reilign the quote logo for mobile sites
 */
+
+/* Callouts */
+.callout {
+    padding: 4rem;
+    border-radius: 5px;
+}
+
+.callout--primary {
+    background: var(--color-primary);
+    color: #fff;
+}
+
+.callout__heading{
+    color: #fff;
+    margin-top: 0;
+    font-size: 3rem;
+}
+
+.callout .btn {
+    justify-self: center; /*justify-self as well as align-self are used for items withing a grid*/
+    align-self: center;
+}
+
+.callout__content{
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .callout .grid--1x2{
+        grid-template-columns: 1fr auto; /*auto will make the column wide enough to fit the button 
+        if window is being stretched*/
+    }
+
+    .callout__content{
+        text-align: left;
+    }
+    .callout .btn {
+        justify-self: start;
+        margin: 0 2rem ;
+
+    }
+    
+}
