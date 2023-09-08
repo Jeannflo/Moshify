@@ -223,8 +223,16 @@ a {
     text-transform: uppercase;
     white-space: nowrap;
     margin: 1rem 0;
-
+    outline: 0;
 }
+
+.btn .icon {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
+    vertical-align: middle; /*to align icon with btn */
+}
+
 .btn--primary{
     background: var(--color-primary);
     color: #fff;
@@ -301,7 +309,7 @@ a {
 .input-group input{
     border: 0;
     flex-grow: 1;
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 2rem;
 }
 
 .input-group .btn {
@@ -740,4 +748,16 @@ nav.collapsible--expanded .nav__toggler{ /* by having two classes together witho
     }
 
     
+}
+
+
+/* Domain Block */
+
+.block-domain .input-group {
+    box-shadow: 0 0 30px 20px #e6ebee;
+    border: 0;
+    margin: 4rem 0;
+}
+.block-domain__prices {
+
 }
