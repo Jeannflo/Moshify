@@ -345,11 +345,17 @@ a {
     color: #fff;
 }
 
+.card--primary .badge--primary {
+    background: #126de4 ;
+}
 .card--secondary .badge--secondary {
     background: #02cdf1 ;
-
 }
 /* Plans */
+
+.plan{
+    transition: transform 0.2s ease-out;
+}
 
 .plan__name{
     color: #fff;
@@ -379,6 +385,11 @@ a {
 .plan .list__item{
     bottom: 2rem;
 }
+
+.plan--popular {
+    transform: scale(1.1); /* scaling it 10% larger*/
+}
+
 .plan--popular .card__header{
     position: relative;
 }
@@ -389,6 +400,14 @@ a {
     position: absolute;
     top: -6px;
     right: 5%;
+}
+
+.plan:hover{
+    transform: scale(1.05); 
+}
+.plan--popular:hover{
+    transform: scale(1.15); /* MAKE this scale slightly bigger to make the popular
+    plan stand out regarles of the hover effect*/
 }
 
 @media screen and (min-width: 1024px) {
@@ -756,8 +775,36 @@ nav.collapsible--expanded .nav__toggler{ /* by having two classes together witho
 .block-domain .input-group {
     box-shadow: 0 0 30px 20px #e6ebee;
     border: 0;
-    margin: 4rem 0;
+    margin: 4rem auto;
+    max-width: 670px;
+    
 }
 .block-domain__prices {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 6rem); /* This will set the height of each row 
+    if not set items will be too close to eachother*/
+    font-size: 2rem;
+    font-weight: 600;
+    justify-items: center;
+    max-width: 700px;
+    margin: 0 auto; /*margin: (vertical), (horrizontal)*/
+}
 
+@media screen and (min-width:768px) {
+    .block-domain__prices{
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+        /*Minmax(min 100px btw each column, maximum of 1fr (fraction))*/
+    }
+}
+
+/* Plans Block */
+
+.block-plans .grid{
+    gap: 8rem 4rem; /*gab btn (rows, column)*/
+}
+
+.block-plans .card {
+    max-width: 500px;
+    margin: 0 auto;
 }
