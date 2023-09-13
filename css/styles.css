@@ -81,7 +81,7 @@ a {
 }
 
 .link-arrow::after {
-    content: '-->';
+    content: "➞";
     margin-left: 5px;
     transition: margin 0.15;
 }
@@ -807,4 +807,10 @@ nav.collapsible--expanded .nav__toggler{ /* by having two classes together witho
 .block-plans .card {
     max-width: 500px;
     margin: 0 auto;
+}
+
+/* Features*/
+
+.feature__heading{
+    margin: 1rem 0;
 }
