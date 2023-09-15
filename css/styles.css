@@ -828,7 +828,6 @@ nav.collapsible--expanded .nav__toggler{ /* by having two classes together witho
     feature of second feature */
     .feature:nth-of-type(even) .feature__content {
         order: 2;
-
     }
     
 }
