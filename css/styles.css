@@ -16,6 +16,15 @@
 } /*Watch the second part of HTML CSS for this rule*/
 
 /* Typography */
+
+::selection{ /*by using selection 
+    when highlighting the text color of the background and the 
+    highlight will change to the desired color*/
+    background: var(--color-primary);
+    color: #fff
+    ;
+}
+
 html{
     /*62.5% of 16px = 10px*/
     font-size: 62.5%;
@@ -47,6 +56,7 @@ h2 {
 }
 h3 {
     font-size: 3rem;
+    font-weight: 500;
 }
 p {
     margin-top: 0;
@@ -136,7 +146,7 @@ a {
 .list {
     list-style: none;
     padding: 0;
-    color: var(--color-headings);
+    
 }
 
 .list--inline .list__item{
@@ -147,6 +157,7 @@ a {
 .list--tick{
     list-style-image: url(../images/tick.svg);
     padding-left: 3rem;
+    color: var(--color-headings);
 }
 
 .list--tick .list__item {
@@ -429,6 +440,7 @@ a {
 
 .media {
     display: flex;
+    margin-bottom: 4rem;
 }
 .media__title{
     margin-top: 0;
@@ -652,8 +664,12 @@ Reilign the quote logo for mobile sites
     color: #7b858b;
 
 }
-
-.block--dark .block__heading{
+/*by having all h1 - h3 
+this will make all headings with block--dark = dark backgrounds 
+white without having to add a class to each heading*/
+.block--dark h1,
+.block--dark h2,
+.block--dark h3{
     color: #fff;
 }
 
@@ -662,11 +678,11 @@ Reilign the quote logo for mobile sites
     /* calc will allow
     me to add or substract from the variable that has already been set 
     without having to keep editing the code when changes are being made */
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
 }
 .block--skewed-left{ /*go back to part one for block skewed lesson*/
     padding-bottom: calc(var(--padding-vertical) + 4rem); 
-    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
 }
 
 .container{
@@ -741,11 +757,8 @@ nav.collapsible--expanded .nav__toggler{ /* by having two classes together witho
 
 /* Hero / Banner */
 
-.hero{
-    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
 /*https://bennettfeely.com/clippy/ to generate clip-paths*/
 
-}
 .hero__tagline{
     font-size: 2rem;
     color: #b9c3cf;
@@ -833,3 +846,36 @@ nav.collapsible--expanded .nav__toggler{ /* by having two classes together witho
     }
     
 }
+
+/* Showcase Block*/
+
+.block-showcase__image > img{ /* by applying a direct child it will be
+    targeting any container with .block-showcase__image followed by an img */
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .block-showcase .grid{
+        grid-template-columns: 50% 50%; /*by setting it to 50% 50% 
+        the width will be determined by the size of the container 
+        therefore, 50 / 50 percent of the container*/
+    }
+
+    .block-showcase__image{
+
+        justify-self: end; /* to push both the img and the content in the container
+        just justify-self end that way contents wont collide when the window is smaller
+        */
+    }
+
+    .block-showcase__image > img {
+        width: auto;
+        max-width: 700px; /*set this to 700px that way 
+        the img wont get any bigger on screens larger than 700px*/
+
+    }
+    
+}
+
+/*TODO: Continue to work on the Showcase Block 
+Images are already converted to WEPB and Resized*/
