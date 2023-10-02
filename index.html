@@ -11,70 +11,99 @@
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-    <section class="block block--dark block--skewed-right block-showcase">
+    <section class="block">
         <header class="block__header">
-            <h2>User Friendly Control Panel</h2>
+            <h2>What Our Customer are Saying</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, nemo.</p>
         </header>
-
-        <div class="container grid grid--1x2">
-            <picture class="block-showcase__image" >
-                <source
-                type="image/webp"
-                srcset="images/ipad.webp 1x, images/ipad@2x.webp 2x"
-                >
-                <source
-                type="image/png"
-                srcset="images/ipad.png 1x, images/ipad@2x.png 2x"
-                >
-                <img src="images/ipad.png" alt="">
-            </picture>
-            <lu class="list">
-                <li>
-                    <div class="media">
-                        <div class="media__image">
-                            <svg class="icon icon--primary">
-                                <use xlink:href="images/sprite.svg#settings"></use>
+        <div class="container">
+            <div class="card testimonial">
+                <div class="grid grid--1x2">
+                    <div class="testimonial__image">
+                        <img
+                        src="/images/testimonial.jpg"
+                        alt="A happy, smiling custumer">
+                        <span class="icon-container icon-container--accent">
+                            <svg class="icon icon--white icon--small">
+                                <use xlink:href="images/sprite.svg#quotes"></use>
                             </svg>
-                         </div>
-                        <div class="media__body">
-                            <h3 class="media__title">Easy Start & Managed Updates</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur 
-                                ipsam porro laboriosam eos impedit. Ipsam qui mollitia ex odio natus!</p>
-                        </div>
+                        </span>
                     </div>
-                </li>
-                <li>
-                    <div class="media">
-                        <div class="media__image">
-                            <svg class="icon icon--primary">
-                                <use xlink:href="images/sprite.svg#growth"></use>
-                            </svg>
-                         </div>
-                        <div class="media__body">
-                            <h3 class="media__title">Staging, Git & WP-CLI</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur 
-                                ipsam porro laboriosam eos impedit. Ipsam qui mollitia ex odio natus!</p>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="media">
-                        <div class="media__image">
-                            <svg class="icon icon--primary">
-                                <use xlink:href="images/sprite.svg#wordpress"></use>
-                            </svg>
-                         </div>
-                        <div class="media__body">
-                            <h3 class="media__title">Dynamic Caching & More</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur 
-                                ipsam porro laboriosam eos impedit. Ipsam qui mollitia ex odio natus!</p>
-                        </div>
-                    </div>
-                </li>
-            </lu>
+                    <blockquote class="quote">
+                        <p class="quote__text"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur officiis unde
+                            perferendis dolor impedit. Ab atque expedita accusamus numquam unde. </p>
+                            <footer>
+                                <div class="media">
+                                    <div class="media__image">
+                                        <svg class="icon icon--primary quote__line">
+                                            <use xlink:href="images/sprite.svg#line"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="media__body">
+                                        <h3 class="media__title quote__author">Jhone Lumeo</h3>
+                                        <p class="quote__organization">ABC ceo</p>
+                                    </div>
+                                </div>
+                            </footer>
+                    </blockquote>
+            
+                </div>
+            </div>
         </div>
+
     </section>
-    
+    <footer class="block block--dark footer">
+        <div class="container grid footer__sections">
+            <section class="collapsible collapsible--expanded footer__section">
+                <header class="collapsible__header">
+                    <h2 class="collapsible__heading footer__heading">Item 1</h2>            
+                        <svg class="icon icon--white collasible__shevron"> 
+                            <!-- Icon does not show 
+                                (color was changed to black in order to be viewed)-->
+                            <use xlink:href="images/sprite.svg#chevron"></use>
+                        </svg>
+                </header>
+                <div class="collapsible__content">
+                    <ul class="list">
+                        <li><a href="#">Website Hosting</a></li>
+                        <li><a href="#">Free Automated Wordpress</a></li>
+                        <li><a href="#">Migrations</a></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="collapsible footer__section">
+                <header class="collapsible__header">
+                    <h2 class="collapsible__heading footer__heading">Item 2</h2>            
+                        <svg class="icon icon--white collasible__shevron"> 
+                            <!-- Icon does not show 
+                                (color was changed to black in order to be viewed)-->
+                            <use xlink:href="images/sprite.svg#chevron"></use>
+                        </svg>
+                </header>
+                <div class="collapsible__content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, praesentium!
+                </div>
+            </section>
+            <section class="collapsible footer__section">
+                <header class="collapsible__header">
+                    <h2 class="collapsible__heading footer__heading">Item 3</h2>            
+                        <svg class="icon icon--white collasible__shevron"> 
+                            <!-- Icon does not show 
+                                (color was changed to black in order to be viewed)-->
+                            <use xlink:href="images/sprite.svg#chevron"></use>
+                        </svg>
+                </header>
+                <div class="collapsible__content">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, praesentium!
+                </div>
+            </section>
+            
+            <section class="footer__brand">
+                <img src="images/logo.svg" alt="" class="">
+                <p class="footer__copyright">Copyright 2020 Mosh Hamedani</p>
+            </section>
+        </div>
+    </footer>
     <script src="js/main.js"></script>
 </body>
 <!-- Width of most mobile devices under 500px z

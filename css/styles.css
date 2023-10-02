@@ -653,6 +653,7 @@ Reilign the quote logo for mobile sites
 }
 .block__header{
     text-align: center;
+    margin-bottom: 4rem;
 
 }
 .block__heading{
@@ -877,5 +878,80 @@ nav.collapsible--expanded .nav__toggler{ /* by having two classes together witho
     
 }
 
+/* Footer*/
+.footer {
+    background: #232323;
+}
+
+.footer a {
+    color: #777
+}
+.footer a:hover{
+    color: #fff;
+    transition: .3s;
+}
+
+.footer__section{
+    padding: 2rem;
+    border-bottom: 1px solid #393939;
+}
+
+.footer__heading{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.footer__brand{
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.footer__brand img{
+/*TODO:" Consider refactoring this and applying to all imgages*/
+
+    width: 100%;
+    max-width: 230px;
+}
+.footer__copyright{
+    font-size: 2.1rem;
+    color: #fff;
+    opacity: 0.3;    
+}
+
+.footer__section .list{
+    margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .footer__sections{
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+        /*auto-fit to fit as many items as it can fit
+        by using minmax you have to combine it with a min of value of 10rem or 100px
+        and maximum of 1fr
+        */
+    }
+
+    .footer .collapsible__shevron {
+        display: none; /*to make the icons disapear*/
+    }
+    .footer .collapsible__content{
+        opacity: 1;
+        max-height: 100px;   
+    }
+    .footer__brand{
+        order: -1; /*by setting the order to (-) negative it moves the last item
+        in the container to the left side*/
+        margin-top: 1rem;
+    }
+    .footer__copyright{
+        font-size: 1.5rem;
+    }
+    .footer__section{
+        border: 0;
+    }
+    .footer__heading{
+        font-size: 1.6rem;
+    }
+}
 /*TODO: Continue to work on the Showcase Block 
 Images are already converted to WEPB and Resized*/
