@@ -619,7 +619,7 @@ Reilign the quote logo for mobile sites
 
 }
 
-.collapsible__shevron{
+.collapsible__shevron {
     transform: rotate(-90deg);
     transition: transform .3s;
 }
@@ -931,12 +931,12 @@ nav.collapsible--expanded .nav__toggler{ /* by having two classes together witho
         */
     }
 
-    .footer .collapsible__shevron {
-        display: none; /*to make the icons disapear*/
+    .footer .collapsible__chevron {
+         display: none;/*to make the icons disapear*/
     }
     .footer .collapsible__content{
         opacity: 1;
-        max-height: 100px;   
+        max-height: 100%;   
     }
     .footer__brand{
         order: -1; /*by setting the order to (-) negative it moves the last item
@@ -953,5 +953,3 @@ nav.collapsible--expanded .nav__toggler{ /* by having two classes together witho
         font-size: 1.6rem;
     }
 }
-/*TODO: Continue to work on the Showcase Block 
-Images are already converted to WEPB and Resized*/
