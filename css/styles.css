@@ -93,7 +93,7 @@ a {
 .link-arrow::after {
     content: "➞";
     margin-left: 5px;
-    transition: margin 0.15;
+    transition: margin 0.15s;
 }
 
 .link-arrow:hover::after {
